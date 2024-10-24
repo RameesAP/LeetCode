@@ -3,17 +3,31 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
-    const map = new Map();  // Create a map to store numbers and their indices
+// var twoSum = function(nums, target) {
+    
+//     for(let i=0 ; i<=nums.length; i++){
+//         for(let j=i+1; j<=nums.lenght; i++){
+//             if(nums[i]+nums[j]==target){
+//                  return [i,j]
+//              }
+//         }
+    
+      
+// }
 
-    for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];  // Calculate the complement
-
-        if (map.has(complement)) {
-            // Return a flat array with the two indices
-            return [map.get(complement), i];  
-        }
-        // Otherwise, store the current number and its index in the map
-        map.set(nums[i], i);
+    function twoSum(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j]; 
+      }
     }
-};
+  }
+}
+    
+    
+
+// };
+
+const nums = [2,7,11,15]
+const target = 9 
